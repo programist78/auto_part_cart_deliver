@@ -1,0 +1,143 @@
+@import '../../styles/variables';
+
+.main {
+    margin-top: 20px;
+    border: 2px solid $grayColor;
+    border-radius: 15px;
+    @include flex(center);
+    flex-direction: column;
+    padding: 80px 100px 70px;
+
+    @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+        padding: 80px 50px 70px;
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        padding: 80px 30px 70px;
+    }
+
+    @media (max-width:$screen-md) {
+        padding: 30px 30px 70px;
+        border: none;
+    }
+}
+
+.photo {
+    @include flex(center);
+    cursor: pointer;
+
+    &:hover {
+        .btn1 {
+            background-color: $accentColorDark;
+        }
+    }
+
+    div {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 20px;
+    }
+
+    .btn1 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        @include button;
+        padding: 5px 30px;
+        margin-left: 20px;
+    }
+
+    input {
+        display: none;
+    }
+}
+
+.form {
+    width: 100%;
+    padding: 0 150px;
+
+    @media (max-width:$screen-xxl) and (min-width:$screen-xl) {
+        padding: 0 100px;
+    }
+
+    @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+        padding: 0 50px;
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        padding: 0 30px;
+    }
+
+    @media (max-width:$screen-md) {
+        padding: 0 30px;
+    }
+
+    h3 {
+        text-align: start;
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        @include button;
+        display: block;
+        margin: 50px auto 0;
+        padding: 5px 50px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+}
+
+.inp_con {
+    position: relative;
+
+    input,
+    textarea,
+    select {
+        @include input;
+    }
+}
+
+.photo {
+
+    div {
+        text-align: center;
+    }
+
+    div {
+        @media (max-width:$screen-lg) and (min-width:$screen-md) {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        @media (max-width:$screen-md) {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
+
+    button {
+        @media (max-width:$screen-lg) and (min-width:$screen-md) {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        @media (max-width:$screen-md) {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+    }
+}
+
+.icon {
+    width: 40px;
+}

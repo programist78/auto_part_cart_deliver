@@ -1,0 +1,218 @@
+@import '../../src/styles/variables';
+
+
+.top {
+    @include flex(space-between);
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    @media (max-width:$screen-md) {
+        margin: 30px 0;
+    }
+
+    label {
+        margin: 0 10px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: 0.4px;
+    }
+
+    input,
+    select {
+        height: 50px;
+        text-align: center;
+        border: 1px solid $grayColor;
+        outline: none;
+        border-radius: 15px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+}
+
+.select {
+    padding: 0 30px;
+}
+
+.products {
+    @include flex(space-between);
+    flex-wrap: wrap;
+    @include background;
+    padding: 60px 80px;
+
+    @media (max-width:$screen-xxl) and (min-width:$screen-xl) {
+        padding: 50px;
+    }
+
+    @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+        padding: 40px;
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        padding: 40px 40px;
+    }
+
+    @media (max-width:$screen-md) {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+    }
+}
+
+.product {
+    width: 31%;
+    border: 2px solid $grayColor;
+    padding: 40px 55px 15px;
+    border-radius: 15px;
+    margin-bottom: 34px;
+
+    @media (max-width:$screen-xxl) and (min-width:$screen-xl) {
+        padding: 40px 40px 15px;
+    }
+
+    @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+        padding: 30px 30px 15px;
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        width: 48%;
+        padding: 30px 40px 15px;
+    }
+
+    @media (max-width:$screen-md) and (min-width:$screen-sm) {
+        width: 45%;
+        padding: 15px 30px 10px;
+    }
+
+    @media (max-width:$screen-sm) {
+        width: 48%;
+        padding: 15px 25px 10px;
+    }
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 207px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+        @media (max-width:$screen-lg) and (min-width:$screen-md) {
+            height: 150px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width:$screen-md) {
+            height: 100px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.product_texts {
+    @include flex(space-between);
+
+    h6 {
+        @include fontMd;
+
+        @media (max-width:$screen-lg) and (min-width:$screen-md) {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: 0.48px;
+        }
+
+        @media (max-width:$screen-md) {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 0.36px;
+        }
+    }
+
+    span {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.4px;
+
+        @media (max-width:$screen-md) {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 0.36px;
+        }
+    }
+}
+
+.cart {
+    height: 63px;
+    width: 63px;
+    background-color: black;
+    border-radius: 1000px;
+    border: 2px solid $accentColor;
+    @include flex(center);
+    cursor: pointer;
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        height: 50px;
+        width: 50px;
+    }
+
+    @media (max-width:$screen-md) {
+        height: 34px;
+        width: 34px;
+    }
+}
+
+.btn {
+    width: 100%;
+    @include flex(center);
+    margin-top: 40px;
+}
+
+.selectors {
+    @media (max-width:$screen-xl) {
+        display: none;
+    }
+}
+
+.title {
+    @media (max-width:$screen-md) {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.4px;
+    }
+}
+
+.product_title {
+    overflow: hidden;
+    max-width: calc(100% - 75px);
+
+    h6 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.empty {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}

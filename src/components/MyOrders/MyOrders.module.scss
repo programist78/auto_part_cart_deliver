@@ -1,0 +1,150 @@
+@import '../../styles/variables';
+
+.order {
+    padding: 22px 40px;
+    border: 2px solid $grayColor;
+    border-radius: 15px;
+    margin-top: 22px;
+    cursor: pointer;
+    @include flex(space-between);
+
+    &:hover {
+        background-color: darken(#fff, 10%);
+    }
+
+    @media (max-width:$screen-xl) and (min-width:$screen-md) {
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    @media (max-width:$screen-md) {
+        padding: 10px 5px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+}
+
+.name {
+    cursor: pointer;
+    font-size: 20px;
+    max-width: 25%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @media (max-width:$screen-xl) and (min-width:$screen-md) {
+        width: 60px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    @media (max-width:$screen-md) {
+        width: 55px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+}
+
+.status {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+
+    @media (max-width:$screen-xl) and (min-width:$screen-md) {
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    @media (max-width:$screen-md) {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 20px;
+    }
+}
+
+.done {
+    color: #25B401;
+}
+
+.not_done {
+    color: #DB2721;
+}
+
+.active {
+    color: #FFC93F;
+}
+
+.btn {
+    padding: 5px 22px;
+    border-radius: 1000px;
+    background-color: $accentColor;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+
+    @media (max-width:$screen-xl) and (min-width:$screen-md) {
+        padding: 5px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    @media (max-width:$screen-md) {
+        padding: 5px;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+}
+
+.controls {
+    width: 20%;
+    margin: 20px auto 0;
+    @include flex(space-between);
+    cursor: pointer;
+
+    svg {
+        &:first-of-type {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.delete {
+    padding: 5px 22px;
+    border-radius: 1000px;
+    background-color: $accentColor;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($accentColor, 10%);
+    }
+
+    @media (max-width:$screen-xl) and (min-width:$screen-md) {
+        padding: 5px 20px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    @media (max-width:$screen-md) {
+        padding: 5px 15px;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+}

@@ -1,0 +1,83 @@
+@import '../../styles/variables';
+
+.main {
+    padding: 40px 0 0 0;
+
+    @media (max-width:$screen-md) {
+        padding-top: 0;
+    }
+}
+
+.inp {
+    @include input;
+}
+
+.inp_con {
+    width: 60%;
+    position: relative;
+
+    @media (max-width:$screen-xxl) and (min-width:$screen-lg) {
+        width: 75%;
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        width: 100%;
+    }
+
+    @media (max-width:$screen-md) {
+        width: 90%;
+    }
+}
+
+.label {
+    position: relative;
+    left: 15px;
+}
+
+.form {
+    margin-top: 50px;
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 30px;
+    border: 2px solid $grayColor;
+    padding: 45px 75px;
+    @include flex(center);
+    flex-direction: column;
+
+    @media (max-width:$screen-xl) {
+        width: 100%;
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        padding: 45px 50px;
+    }
+
+    @media (max-width:$screen-md) {
+        border: none;
+        padding: 45px 20px;
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: 0.48px;
+        margin-bottom: 17px;
+        text-align: center;
+
+        @media (max-width:$screen-md) {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 0.36px;
+        }
+    }
+}
+
+.btn {
+    padding: 10px 100px;
+
+    @media (max-width:$screen-lg) {
+        padding: 10px 50px;
+    }
+}

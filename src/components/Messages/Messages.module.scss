@@ -1,0 +1,294 @@
+@import '../../styles/variables';
+
+.main {
+    margin-top: 40px;
+    border: 2px solid $grayColor;
+    border-radius: 15px;
+    height: 700px;
+
+    @include flex(center);
+    align-items: stretch;
+
+    @media (max-width:$screen-lg) {
+        height: 380px;
+        border: none;
+    }
+}
+
+.contacts {
+    height: 100%;
+    width: 20%;
+    padding: 50px 0;
+    border-right: 1px solid $grayColor;
+    overflow-y: scroll;
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        width: 70px;
+    }
+
+    @media (max-width:$screen-md) {
+        width: 55px;
+        padding-top: 20px;
+    }
+}
+
+.contact {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    margin: 0 auto;
+    margin-top: 30px;
+    cursor: pointer;
+
+    @media (max-width:$screen-lg) {
+        height: 32px;
+        width: 32px;
+    }
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+}
+
+.notification {
+    position: absolute;
+    right: -7px;
+    bottom: -7px;
+    padding: 0 14px;
+    @include flex(center);
+    border-radius: 1000px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0.4px;
+    color: $textColor;
+    height: 37px;
+    background-color: $accentColor;
+
+    @media (max-width:$screen-lg) {
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0.2px;
+        height: 16px;
+        padding: 0 5px;
+        right: -3px;
+        bottom: -3px;
+    }
+}
+
+.rigth {
+    height: 100%;
+    width: 80%;
+}
+
+.top {
+    height: 100px;
+    @include flex(center);
+
+    @media (max-width:$screen-lg) {
+        height: 50px;
+    }
+}
+
+.avatar {
+    border-radius: 1000px;
+    height: 55px;
+    width: 55px;
+    object-fit: cover;
+
+    @media (max-width:$screen-lg) {
+        height: 26px;
+        width: 26px;
+    }
+}
+
+.user_info {
+    padding-left: 6px;
+
+    @media (max-width:$screen-lg) {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 10px;
+        letter-spacing: 0.2px;
+    }
+
+    h6 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+
+        @media (max-width:$screen-lg) {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 14px;
+        }
+    }
+}
+
+.messages {
+    height: 500px;
+    padding: 0 70px;
+    margin-top: auto;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+
+    @media (max-width:$screen-lg) {
+        height: 270px;
+        padding: 0 20px;
+    }
+
+}
+
+.message_con {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.message {
+    border: 1px solid $grayColor;
+    padding: 20px 60px 40px 30px;
+    border-radius: 20px;
+    max-width: 65%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+
+    @media (max-width:$screen-xxl) and (min-width:$screen-lg) {
+        width: 70%;
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+
+    @media (max-width:$screen-lg) {
+        width: 90%;
+        padding: 10px 20px;
+        margin-top: 20px;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    &.your {
+        margin-left: auto;
+        text-align: end;
+        padding: 20px 30px 40px 60px;
+        position: relative;
+        top: -20px;
+
+        @media (max-width:$screen-xxl) and (min-width:$screen-lg) {
+            padding: 10px 20px;
+            top: 0;
+            margin-top: 20px;
+        }
+
+        @media (max-width:$screen-lg) {
+            padding: 10px 20px;
+            top: 0;
+            margin-top: 20px;
+        }
+    }
+}
+
+.message_img {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: -15px;
+    left: -15px;
+    border-radius: 1000px;
+    background-color: #2B2153;
+
+    @media (max-width:$screen-xxl) and (min-width:$screen-lg) {
+        left: -30px;
+    }
+
+    @media (max-width:$screen-lg) {
+        left: -10px;
+        top: 5px;
+        width: 18px;
+        height: 18px;
+    }
+
+    &.your {
+        right: -15px;
+        top: -35px;
+        left: auto;
+
+        @media (max-width:$screen-xxl) and (min-width:$screen-lg) {
+            right: -30px;
+            top: -15px;
+        }
+
+        @media (max-width:$screen-lg) {
+            right: -10px;
+            top: 5px;
+        }
+    }
+}
+
+.form {
+    height: 100px;
+    padding: 0 70px;
+    @include flex(space-between);
+
+    @media (max-width:$screen-lg) {
+        height: 56px;
+        padding: 0 20px;
+    }
+
+    input {
+        @include input;
+        margin-bottom: 0;
+        width: 80%;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+
+        @media (max-width:$screen-lg) {
+            padding: 3px 20px;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        @media (max-width:$screen-md) {
+            width: 74%;
+        }
+    }
+
+    button {
+        width: 19%;
+        height: 50px;
+        display: block;
+        @include button;
+
+        @media (max-width:$screen-lg) and (min-width:$screen-md) {
+            height: auto;
+            padding: 3px 10px;
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        @media (max-width:$screen-md) {
+            height: auto;
+            width: 25%;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+        }
+    }
+}

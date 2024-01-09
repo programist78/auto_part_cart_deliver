@@ -1,0 +1,56 @@
+@import '../../src/styles/variables';
+
+.main {
+    padding-top: 55px;
+    @include flex(space-between);
+    align-items: stretch;
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        padding-top: 40px;
+    }
+
+    @media (max-width:$screen-md) {
+        padding-top: 40px;
+        display: block;
+    }
+}
+
+.profile {
+    background-color: #fff;
+    width: calc(75% - 10px);
+    padding: 55px 40px;
+    border: 1px solid $grayColor;
+
+    @media (max-width:$screen-xxl) and (min-width:$screen-xl) {
+        width: calc(75% - 10px);
+    }
+
+    @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+        width: calc(70% - 10px);
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        width: calc(65% - 10px);
+        padding: 20px;
+    }
+
+    @media (max-width:$screen-md) {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+        h1 {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 32px;
+            letter-spacing: 0.4px;
+
+            &.mob_left {
+                text-align: left;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+// VARIABLES
+
+$mainColor: #161D35;
+$mainColorLighter: #37446F;
+$textColor: #fff;
+$accentColor: #F8DD53;
+$accentColorDark: #FFD25F;
+$accentColorLigth: #FFF4DC;
+$grayColor: #C1C1C1;
+$footerColor: #2B2153;
+
+$screen-xxl: 1500px;
+$screen-xl: 1200px;
+$screen-lg: 998px;
+$screen-md: 768px;
+$screen-sm: 576px;
+$screen-xs: 376px;
+
+
+@mixin flex($justify) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}
+
+@mixin fontXl {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.72px;
+}
+
+@mixin fontMd {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+@mixin fontSm {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+@mixin fontXs {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.28px;
+}
+
+@mixin input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 24px;
+    outline: none;
+    border: 1px solid $grayColor;
+    resize: none;
+    margin-bottom: 14px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+@mixin button {
+    outline: none;
+    border: none;
+    border-radius: 1000px;
+    background-color: $accentColor;
+}
+
+@mixin background {
+    border: 2px solid #fff;
+    background-color: #fff;
+    border-radius: 15px;
+}

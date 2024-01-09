@@ -1,0 +1,67 @@
+@import '../../src/styles/variables';
+
+.main {
+    h1 {
+        padding-bottom: 15px;
+        padding-left: 100px;
+
+        @media (max-width:$screen-lg) and (min-width:$screen-md) {
+            padding-left: 30px;
+        }
+
+        @media (max-width:$screen-md) {
+            padding-left: 0;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 32px;
+            letter-spacing: 0.4px;
+        }
+    }
+}
+
+.text {
+    display: block;
+    background-color: #fff;
+    padding: 30px 400px 50px 100px;
+    border: 2px solid $grayColor;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0.32px;
+
+    @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+        padding: 30px 100px 30px 15px;
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        padding: 30px 100px 30px 15px;
+    }
+
+    @media (max-width:$screen-md) {
+        font-size: 8px;
+        font-weight: 500;
+        line-height: 15px;
+        letter-spacing: 0.16px;
+        padding: 30px 15px 50px;
+    }
+
+    b {
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.4px;
+
+        @media (max-width:$screen-md) {
+            font-size: 8px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 15px;
+            letter-spacing: 0.16px;
+        }
+    }
+
+    h1 {
+        padding-left: 0;
+    }
+}

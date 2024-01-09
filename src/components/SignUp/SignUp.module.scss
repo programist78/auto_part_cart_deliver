@@ -1,0 +1,166 @@
+@import '../../styles/variables';
+
+.main {
+    margin: 90px 0;
+}
+
+.form {
+    background-color: #fff;
+    width: 682px;
+    padding: 60px 0 84px;
+    border-radius: 30px;
+    border: 2px solid $grayColor;
+    margin: 0 auto;
+    @include flex(center);
+    flex-direction: column;
+
+    @media (max-width:$screen-md) and (min-width:$screen-sm) {
+        width: calc(100vw - 100px);
+    }
+
+    @media (max-width:$screen-sm) {
+        width: calc(100vw - 40px);
+    }
+}
+
+.title {
+    margin-bottom: 40px;
+    text-align: center;
+
+    @media (max-width:$screen-md) and (min-width:$screen-sm) {
+        width: calc(100vw - 100px);
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.48px;
+    }
+
+    @media (max-width:$screen-sm) {
+        width: calc(100vw - 40px);
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.48px;
+    }
+}
+
+.inp_con {
+    width: 50%;
+    position: relative;
+
+    @media (max-width:$screen-md) and (min-width:$screen-sm) {
+        width: 60%;
+    }
+
+    @media (max-width:$screen-sm) {
+        width: 70%;
+    }
+
+    &:last-of-type {
+        input {
+            margin-bottom: 0;
+        }
+    }
+
+    input {
+        @include input;
+        margin-bottom: 30px;
+    }
+
+    input.inp_error {
+        margin-bottom: 45px;
+    }
+}
+
+.remember {
+    @include fontXs;
+    margin-bottom: 15px;
+
+    label {
+        padding-left: 5px;
+    }
+}
+
+.label {
+    position: absolute;
+    top: -1.5em;
+    left: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.error {
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.btn {
+    width: 35%;
+    margin-bottom: 15px;
+
+    @media (max-width:$screen-sm) {
+        width: 60%;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+}
+
+.with {
+    width: 50%;
+    border-top: 2px solid $grayColor;
+    padding-top: 8px;
+    padding-bottom: 16px;
+
+    h3 {
+        @include fontSm;
+        text-align: center;
+    }
+}
+
+.icons {
+    height: 63px;
+    padding-top: 17px;
+    @include flex(space-evenly);
+
+    @media (max-width:$screen-sm) {
+        justify-content: space-between;
+    }
+
+    div {
+        cursor: pointer;
+        padding: 5px;
+        height: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 1000px;
+        border: 1px solid $grayColor;
+        @include flex(center);
+    }
+
+    svg {
+        height: 100%;
+        cursor: pointer;
+    }
+}
+
+.apple {
+    background-color: #2F3233;
+
+    svg {
+        position: relative;
+        left: -2px;
+        top: -1px;
+    }
+}
+
+.new {
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}

@@ -1,0 +1,1 @@
+export const fileRenamer = (filename) => `${Date.now()}.${filename}`

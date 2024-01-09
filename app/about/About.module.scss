@@ -1,0 +1,65 @@
+@import '../../src/styles/variables';
+
+.main {
+    h1 {
+        padding-left: 100px;
+        padding-bottom: 40px;
+
+        @media (max-width:$screen-lg) and (min-width:$screen-md) {
+            padding-left: 30px;
+            padding-bottom: 25px;
+        }
+
+        @media (max-width:$screen-md) {
+            padding-left: 0;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 32px;
+            letter-spacing: 0.4px;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+.text_container {
+    background-color: #fff;
+    border: 2px solid $grayColor;
+    padding: 30px 200px 85px 100px;
+
+    @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+        padding: 30px 100px 50px 100px;
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        padding: 30px 25px 50px 25px;
+    }
+
+    @media (max-width:$screen-md) {
+        padding: 30px 15px 50px 15px;
+    }
+}
+
+.text {
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.48px;
+    padding-bottom: 60px;
+
+    @media (max-width:$screen-md) {
+        font-size: 8px;
+        font-weight: 400;
+        line-height: 15px;
+        letter-spacing: 0.16px;
+        padding-bottom: 30px;
+    }
+}
+
+.img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+    height: auto;
+}

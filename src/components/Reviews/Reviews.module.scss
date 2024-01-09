@@ -1,0 +1,113 @@
+@import '../../styles/variables';
+
+.main {
+    padding: 50px 100px 0;
+    @include flex(center);
+    align-items: flex-start;
+    flex-direction: row-reverse;
+
+    @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+        padding: 50px 50px;
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        padding: 50px 50px;
+        display: block;
+    }
+
+    @media (max-width:$screen-md) {
+        padding: 20px 0;
+        display: block;
+    }
+
+    h3 {
+        text-align: start;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.52px;
+        text-transform: capitalize;
+        padding-bottom: 25px;
+
+        @media (max-width:$screen-md) {
+            text-align: center;
+        }
+    }
+}
+
+.form {
+    width: 50%;
+    padding-right: 150px;
+
+    @media (max-width:$screen-xxl) and (min-width:$screen-xl) {
+        padding-right: 100px;
+    }
+
+    @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+        padding-right: 50px;
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        width: 100%;
+        padding: 30px 30px 0;
+    }
+
+    @media (max-width:$screen-md) {
+        width: 100%;
+        padding: 30px 0 0;
+    }
+}
+
+.reviews {
+    width: 50%;
+
+    @media (max-width:$screen-lg) {
+        width: 100%;
+    }
+}
+
+.inp {
+    @include input;
+
+    &:last-of-type {
+        margin-bottom: 22px;
+    }
+}
+
+.review {
+    border: 2px solid $grayColor;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    @media (max-width:$screen-md) {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.2px;
+    }
+
+    h5 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 0.36px;
+
+        @media (max-width:$screen-md) {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 25px;
+            letter-spacing: 0.28px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.btn {
+    width: 50%;
+    margin: 0 auto;
+
+    @media (max-width:$screen-md) {
+        width: 70%;
+    }
+}

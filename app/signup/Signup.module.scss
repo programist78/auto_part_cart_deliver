@@ -1,0 +1,47 @@
+@import '../../src/styles/variables';
+
+.popup {
+    @include background;
+    padding: 65px 0;
+    margin: 40vh auto;
+    width: 435px;
+    position: relative;
+
+    @media (max-width:$screen-sm) {
+        width: calc(100vw - 40px);
+        margin: 20vh auto;
+    }
+
+    h1 {
+        @include fontMd;
+        text-align: center;
+    }
+
+    .link {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        cursor: pointer;
+    }
+}
+
+.select {
+    @include flex(space-between);
+    padding: 70px 90px 0;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+
+    @media (max-width:$screen-sm) {
+        width: calc(100vw - 40px);
+        padding: 70px 50px 0;
+    }
+
+    a {
+        padding: 5px 30px;
+        border-radius: 24px;
+        background-color: $footerColor;
+        color: $textColor;
+    }
+}

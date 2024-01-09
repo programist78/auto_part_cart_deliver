@@ -1,0 +1,243 @@
+@import '../../styles/variables';
+
+.main {
+    padding-top: 50px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.title {
+    padding-left: 110px;
+    @include fontXl;
+    margin-bottom: 40px;
+
+    @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+        padding-left: 30px;
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        padding-left: 30px;
+    }
+
+    @media (max-width:$screen-md) {
+        padding-left: 20px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.4px;
+    }
+}
+
+.slider {
+    height: 226px;
+    @include flex(center);
+
+    @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+        height: 175px;
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        height: 175px;
+    }
+
+    @media (max-width:$screen-md) {
+        height: 380px;
+    }
+}
+
+.products {
+    width: 85%;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+    @include flex(space-between);
+
+    @media (max-width:$screen-md) {
+        flex-wrap: wrap;
+    }
+}
+
+.product {
+    height: 100%;
+    width: 23%;
+    border: 2px solid $grayColor;
+    padding: 24px 35px 22px;
+    border-radius: 15px;
+    position: relative;
+
+    @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+        padding: 20px 25px 0;
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        padding: 20px 25px 0;
+        width: 32%;
+
+        &:last-of-type {
+            display: none;
+        }
+    }
+
+    @media (max-width:$screen-md) {
+        padding: 15px 15px 0;
+        height: 170px;
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 131px;
+        object-fit: cover;
+
+        @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+            height: 101px;
+        }
+
+        @media (max-width:$screen-lg) and (min-width:$screen-md) {
+            height: 101px;
+        }
+
+        @media (max-width:$screen-md) {
+            height: 74px;
+        }
+    }
+}
+
+.texts {
+    @include flex(space-between);
+
+    @media (max-width:$screen-md) {
+        display: block;
+    }
+
+    h6 {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: 0.36px;
+
+        @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 25px;
+            letter-spacing: 0.32px;
+        }
+
+        @media (max-width:$screen-lg) and (min-width:$screen-md) {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 25px;
+            letter-spacing: 0.32px;
+        }
+
+        @media (max-width:$screen-md) {
+            text-align: center;
+            width: 100%;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 0.36px;
+        }
+    }
+
+    span {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.4px;
+
+        @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 20px;
+            letter-spacing: 0.4px;
+        }
+
+        @media (max-width:$screen-lg) and (min-width:$screen-md) {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 20px;
+            letter-spacing: 0.4px;
+        }
+
+        @media (max-width:$screen-md) {
+            @include flex(center);
+            width: 70%;
+            height: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 32px;
+            letter-spacing: 0.36px;
+        }
+    }
+}
+
+.cart {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 1000px;
+    border: 2px solid $accentColor;
+    @include flex(center);
+    cursor: pointer;
+
+    @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+        width: 30px;
+        height: 30px;
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        width: 30px;
+        height: 30px;
+    }
+
+    @media (max-width:$screen-md) and (min-width:$screen-sm) {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 25px;
+        bottom: 15px;
+    }
+
+    @media (max-width:$screen-sm) {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+    }
+
+    svg {
+        height: 60%;
+        width: 60%;
+    }
+}
+
+.controls {
+    position: absolute;
+    height: 226px;
+    width: 50px;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+
+    @media (max-width:$screen-xl) and (min-width:$screen-lg) {
+        height: 175px;
+    }
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        height: 175px;
+    }
+
+    @media (max-width:$screen-md) {
+        display: none;
+    }
+
+    &:last-of-type {
+        right: 0;
+        left: auto;
+        transform: rotate(180deg);
+    }
+}

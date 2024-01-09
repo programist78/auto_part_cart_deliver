@@ -1,0 +1,151 @@
+@import '../../src/styles/variables';
+
+.main {
+    margin: 90px 0;
+}
+
+.form {
+    background-color: #fff;
+    width: 682px;
+    padding: 60px 0 84px;
+    border-radius: 30px;
+    border: 2px solid $grayColor;
+    margin: 0 auto;
+    @include flex(center);
+    flex-direction: column;
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        width: calc(100% - 180px);
+    }
+
+    @media (max-width:$screen-md) {
+        width: calc(100% - 100px);
+    }
+}
+
+.title {
+    margin-bottom: 40px;
+
+    @media (max-width:$screen-md) {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0.52px;
+    }
+}
+
+.inp_con {
+    width: 50%;
+    position: relative;
+
+    @media (max-width:$screen-lg) and (min-width:$screen-md) {
+        width: 60%;
+    }
+
+    @media (max-width:$screen-md) {
+        width: 70%
+    }
+
+    &:last-of-type {
+        input {
+            margin-bottom: 0;
+        }
+    }
+
+    input {
+        @include input;
+        margin-bottom: 30px;
+    }
+
+    input[name="password"] {
+        margin-bottom: 15px;
+    }
+}
+
+.remember {
+    @include fontXs;
+    margin-bottom: 15px;
+
+    label {
+        padding-left: 5px;
+    }
+}
+
+.error,
+.label {
+    position: absolute;
+    top: -1.3em;
+    left: 15px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.error {
+    color: red;
+}
+
+.btn {
+    width: 35%;
+    margin-bottom: 15px;
+
+    @media (max-width:$screen-md) {
+        width: 60%;
+    }
+}
+
+.with {
+    width: 50%;
+    border-top: 2px solid $grayColor;
+    border-bottom: 2px solid $grayColor;
+    padding-top: 8px;
+    padding-bottom: 16px;
+
+    h3 {
+        @include fontSm;
+        text-align: center;
+    }
+}
+
+.icons {
+    height: 63px;
+    padding-top: 17px;
+    @include flex(space-evenly);
+
+    @media (max-width:$screen-md) {
+        justify-content: space-between;
+    }
+
+    div {
+        cursor: pointer;
+        padding: 5px;
+        height: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 1000px;
+        border: 1px solid $grayColor;
+        @include flex(center);
+    }
+
+    svg {
+        height: 100%;
+        cursor: pointer;
+    }
+}
+
+.apple {
+    background-color: #2F3233;
+
+    svg {
+        position: relative;
+        left: -2px;
+        top: -1px;
+    }
+}
+
+.new {
+    padding-top: 45px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration-line: underline;
+}

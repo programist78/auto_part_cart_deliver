@@ -1,0 +1,48 @@
+@import '../../styles/variables.scss';
+
+.btn {
+    background-color: $accentColor;
+    padding: 12px 51px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    @include flex(center);
+    outline: none;
+    border:none;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($accentColor, 10%);
+    }
+
+    &:disabled {
+        background-color: lighten($accentColor, 10%);;
+    }
+}
+
+.btn_black {
+    background-color: #000;
+    color: white;
+    padding: 12px 51px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    @include flex(center);
+    outline: none;
+    border:none;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten(#000, 10%);
+    }
+
+    &:disabled {
+        background-color: gray;
+    }
+}
